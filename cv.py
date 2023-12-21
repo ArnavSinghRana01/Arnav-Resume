@@ -1,12 +1,10 @@
 from pathlib import Path
-
 import streamlit as st
 from PIL import Image
 
 # Path setting
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
-resume_file = current_dir / "assests" / "resume_file.pdf"
 profile_pic = current_dir / "assests" / "nav_pic.jpeg"
 
 # General Setting
@@ -40,8 +38,6 @@ st.set_page_config(
 # --- LOAD CSS, PDF & PROFILE PIC ---
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-with open(resume_file, "rb") as pdf_file:
-    PDFbyte = pdf_file.read()
 profile_pic = Image.open(profile_pic)
 
 # Custom CSS for background color and image border
@@ -67,13 +63,6 @@ with col1:
 with col2:
     st.title(NAME)
     st.write(DESCRIPTION)
-    st.download_button(
-        label=" 📄 Download Resume",
-        data=PDFbyte,
-        file_name=resume_file.name,
-        mime="application/octet-stream",
-    )
-    st.write("📫", EMAIL)
 
 # SOCIAL LINKS
 st.write("\n")
