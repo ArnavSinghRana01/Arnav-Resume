@@ -87,7 +87,7 @@ st.write("\n")
 st.subheader("Education")
 st.write(
     """
-- 🎓 Bachelor of Business Administration (BBA) - HNB University, Srinagar, Uttarakhand, 2022
+- 🎓 Bachelor of Business Administration (BBA) -  Hemvati Nandan Bahuguna Garhwal University, Srinagar, Uttarakhand, 2022
 - 🎓 Diploma in Computer Application - Hilton Calc, Rishikesh, 2019
 """
 )
