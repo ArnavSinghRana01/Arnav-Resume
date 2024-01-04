@@ -21,11 +21,24 @@ SOCIAL_MEDIA = {
 }
 
 PROJECTS = {
-    "🏆 PBL Metrics Graphical Visualization in Wells (Python, Streamlit, Pyplotly)":
-        "Implemented graphical visualization for PBL metrics at Wells Fargo using Python, Streamlit, and Pyplotly. Due to project confidentiality, a detailed description is not available.",
-    "🏆 Create My Digital CV (Python, Streamlit)":
-        "Add link to the Create My Digital CV project here",
+    "**🏆 PBL Metrics Graphical Visualization in Wells (Python, Streamlit, Pyplotly)**":
+        (
+        "The 'PBL Metrics Graphical Visualization in Wells' project focused on implementing graphical visualization for "
+        "Project-Based Learning (PBL) metrics at Wells Fargo. It leveraged Python for scripting and data processing, "
+        "Streamlit for creating interactive web applications, and Pyplotly for crafting engaging charts. Excel served as the "
+        "primary data source for PBL metrics."
+    ),
+    "**🏆 My Digital CV (Python, Streamlit)**": (
+        "My Digital CV is a standout project that represents my professional journey in a modern and "
+        "interactive way. Developed with Python and the Streamlit framework, this digital CV offers a dynamic platform for "
+        "showcasing my skills, work experience, and contact information. The user-friendly interface ensures a seamless "
+        "experience for anyone exploring my professional background. With the ability to customize the content and layout, "
+        "this digital CV is a visually appealing and efficient tool for presenting my qualifications. It serves as a testament to "
+        "my expertise and provides an engaging overview of my career achievements."
+    ),
 }
+
+
 
 # Set wide layout
 st.set_page_config(
@@ -181,3 +194,11 @@ st.subheader("Projects & Accomplishments")
 st.write("---")
 for project, description in PROJECTS.items():
     st.write(f"{project}: {description}")
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
